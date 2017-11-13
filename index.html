@@ -10,7 +10,7 @@
   </head>
   
   <body>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
    <script type="text/javascript">
      var scene = new THREE.Scene();
      var camera = new THREE.PerspectiveCamera( 75,window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -21,7 +21,7 @@
      
      window.addEventListener('resize', function() {
      renderer.setSize(window.innerWidth,window.innerHeight);
-     camera.aspect = window.innerWidth / window.innerheight;
+     camera.aspect = window.innerWidth / window.innerHeight;
      camera.updateProjectionMatrix();
      },false );
      
