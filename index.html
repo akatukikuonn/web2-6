@@ -31,8 +31,8 @@
      scene.add(new THREE.AmbientLight(0x666666));
      
      var loader = new THRE.TextureLoader();
-     var geometry = new THREE.BoxGeometry( 1, 32, 16 );
-     var material = new THREE.MeshBasicMaterial ({
+     var geometry = new THREE.SphereGeometry( 1, 32, 16 );
+     var material = new THREE.MeshStandardMaterial ({
        color: 0xccffcc,
        map: loader.load('sute-mu.jpg')});
      var mesh = new THREE.Mesh( geometry, material );
