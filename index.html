@@ -25,8 +25,16 @@
      camera.updateProjectionMatrix();
      },false );
      
-     var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-     var material = new THREE.MeshBasicMaterial ({color: 0xccffcc});
+     var light = new THREE.DirectionalLight(0xcccccc);
+     light.position.set(0,100,30);
+     scene.add(light);
+     scene.add(new THREE.AmbientLight(0x666666));
+     
+     var loader = new THRE.TextureLoader();
+     var geometry = new THREE.BoxGeometry( 1, 32, 16 );
+     var material = new THREE.MeshBasicMaterial ({
+       color: 0xccffcc,
+       map: loader.load('sute-mu.jpg')});
      var mesh = new THREE.Mesh( geometry, material );
      scene.add( mesh );
      
